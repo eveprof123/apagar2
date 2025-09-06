@@ -1,4 +1,1157 @@
-<header>ALURAFLIX</header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física com Prof. Everton - Materiais e Aulas de Física</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .physics-icon {
+            background: linear-gradient(45deg, #4f46e5, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold physics-icon">⚛️ Física com Prof. Everton</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
+                        <a href="#materiais" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Materiais</a>
+                        <a href="#aulas" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Aulas</a>
+                        <a href="#simuladores" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Simuladores</a>
+                        <a href="#contato" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#inicio" class="text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                <a href="#materiais" class="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Materiais</a>
+                <a href="#aulas" class="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Aulas</a>
+                <a href="#simuladores" class="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Simuladores</a>
+                <a href="#contato" class="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+            </div>
+        </div>
+    </header>
 
-ATRAVÉS DO ARANHAVERSO SUPERA O PRIMEIRO FILME?
-#homem-aranha
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Aprenda Física de Forma <span class="text-yellow-300">Interativa</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+                    Materiais didáticos, aulas online e simuladores para tornar o aprendizado de física mais dinâmico e eficiente.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        Explorar Materiais
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                        Assistir Aulas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">500+</div>
+                    <div class="text-gray-600">Exercícios Resolvidos</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">120+</div>
+                    <div class="text-gray-600">Videoaulas</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">50+</div>
+                    <div class="text-gray-600">Simuladores</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">10k+</div>
+                    <div class="text-gray-600">Estudantes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materiais Section -->
+    <section id="materiais" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Materiais Didáticos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Conteúdo organizado por temas para facilitar seus estudos
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mecânica -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Mecânica</h3>
+                    <p class="text-gray-600 mb-4">Cinemática, dinâmica, estática e leis de Newton com exercícios práticos.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">45 materiais</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors" onclick="openMaterialsModal('mecanica')">
+                            Acessar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Termodinâmica -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🌡️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Termodinâmica</h3>
+                    <p class="text-gray-600 mb-4">Calor, temperatura, gases ideais e máquinas térmicas.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">32 materiais</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors" onclick="openMaterialsModal('termodinamica')">
+                            Acessar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Eletromagnetismo -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Eletromagnetismo</h3>
+                    <p class="text-gray-600 mb-4">Eletrostática, corrente elétrica, magnetismo e ondas eletromagnéticas.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">38 materiais</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors" onclick="openMaterialsModal('eletromagnetismo')">
+                            Acessar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Óptica -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Óptica</h3>
+                    <p class="text-gray-600 mb-4">Reflexão, refração, lentes, espelhos e instrumentos ópticos.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">28 materiais</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors" onclick="openMaterialsModal('optica')">
+                            Acessar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ondulatória -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🌊</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Ondulatória</h3>
+                    <p class="text-gray-600 mb-4">Movimento harmônico, ondas mecânicas, som e acústica.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">25 materiais</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors" onclick="openMaterialsModal('ondulatoria')">
+                            Acessar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Física Moderna -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Física Moderna</h3>
+                    <p class="text-gray-600 mb-4">Relatividade, física quântica, radioatividade e física nuclear.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">22 materiais</span>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors" onclick="openMaterialsModal('fisica-moderna')">
+                            Acessar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aulas Section -->
+    <section id="aulas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Aulas Online</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Videoaulas explicativas com professores experientes
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gray-900 rounded-xl p-8 text-white">
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-4">Aula em Destaque</h3>
+                        <p class="text-center text-gray-300 mb-6">Leis de Newton - Aplicações Práticas</p>
+                        <div class="text-center">
+                            <button class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors">
+                                Assistir Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">01</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900">Introdução à Cinemática</h4>
+                            <p class="text-sm text-gray-600">Conceitos básicos de movimento</p>
+                        </div>
+                        <div class="text-sm text-gray-500">15 min</div>
+                    </div>
+
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">02</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900">Movimento Uniforme</h4>
+                            <p class="text-sm text-gray-600">Velocidade constante e gráficos</p>
+                        </div>
+                        <div class="text-sm text-gray-500">22 min</div>
+                    </div>
+
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">03</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900">Movimento Uniformemente Variado</h4>
+                            <p class="text-sm text-gray-600">Aceleração e equações do MUV</p>
+                        </div>
+                        <div class="text-sm text-gray-500">28 min</div>
+                    </div>
+
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">04</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900">Queda Livre</h4>
+                            <p class="text-sm text-gray-600">Movimento sob ação da gravidade</p>
+                        </div>
+                        <div class="text-sm text-gray-500">18 min</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simuladores Section -->
+    <section id="simuladores" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simuladores Interativos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Experimente conceitos físicos através de simulações práticas
+                </p>
+            </div>
+
+            <!-- Mecânica -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">🚀</span> Mecânica
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">📐</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Lançamento de Projéteis</h4>
+                            <p class="text-gray-600 text-sm mb-3">Simule diferentes ângulos e velocidades</p>
+                            <button onclick="openSimulatorsModal('mecanica')" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">⚖️</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Leis de Newton</h4>
+                            <p class="text-gray-600 text-sm mb-3">Visualize forças e aceleração</p>
+                            <button onclick="openSimulatorsModal('mecanica')" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🎯</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Movimento Circular</h4>
+                            <p class="text-gray-600 text-sm mb-3">Força centrípeta e velocidade angular</p>
+                            <button onclick="openSimulatorsModal('mecanica')" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Termodinâmica -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">🌡️</span> Termodinâmica
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🔥</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Gases Ideais</h4>
+                            <p class="text-gray-600 text-sm mb-3">Lei dos gases e transformações</p>
+                            <button onclick="openSimulatorsModal('termodinamica')" class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">⚙️</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Máquina Térmica</h4>
+                            <p class="text-gray-600 text-sm mb-3">Ciclo de Carnot e eficiência</p>
+                            <button onclick="openSimulatorsModal('termodinamica')" class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🧊</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Mudanças de Estado</h4>
+                            <p class="text-gray-600 text-sm mb-3">Fusão, vaporização e sublimação</p>
+                            <button onclick="openSimulatorsModal('termodinamica')" class="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eletromagnetismo -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">⚡</span> Eletromagnetismo
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                            <div class="text-4xl text-white">🔋</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Circuitos Elétricos</h4>
+                            <p class="text-gray-600 text-sm mb-3">Monte circuitos e analise correntes</p>
+                            <button onclick="openSimulatorsModal('eletromagnetismo')" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                            <div class="text-4xl text-white">🧲</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Campo Magnético</h4>
+                            <p class="text-gray-600 text-sm mb-3">Visualize linhas de campo magnético</p>
+                            <button onclick="openSimulatorsModal('eletromagnetismo')" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                            <div class="text-4xl text-white">⚡</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Lei de Coulomb</h4>
+                            <p class="text-gray-600 text-sm mb-3">Força entre cargas elétricas</p>
+                            <button onclick="openSimulatorsModal('eletromagnetismo')" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Óptica -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">🔍</span> Óptica
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🪞</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Reflexão e Refração</h4>
+                            <p class="text-gray-600 text-sm mb-3">Lei de Snell e ângulos críticos</p>
+                            <button onclick="openSimulatorsModal('optica')" class="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🔬</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Lentes e Espelhos</h4>
+                            <p class="text-gray-600 text-sm mb-3">Formação de imagens</p>
+                            <button onclick="openSimulatorsModal('optica')" class="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🌈</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Dispersão da Luz</h4>
+                            <p class="text-gray-600 text-sm mb-3">Prisma e espectro luminoso</p>
+                            <button onclick="openSimulatorsModal('optica')" class="w-full bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ondulatória -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">🌊</span> Ondulatória
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">〰️</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Ondas Mecânicas</h4>
+                            <p class="text-gray-600 text-sm mb-3">Frequência, amplitude e comprimento</p>
+                            <button onclick="openSimulatorsModal('ondulatoria')" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🔊</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Interferência</h4>
+                            <p class="text-gray-600 text-sm mb-3">Padrões construtivos e destrutivos</p>
+                            <button onclick="openSimulatorsModal('ondulatoria')" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">🎵</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Efeito Doppler</h4>
+                            <p class="text-gray-600 text-sm mb-3">Mudança de frequência por movimento</p>
+                            <button onclick="openSimulatorsModal('ondulatoria')" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Física Moderna -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">🔬</span> Física Moderna
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-violet-400 to-violet-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">⚛️</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Modelo Atômico</h4>
+                            <p class="text-gray-600 text-sm mb-3">Níveis de energia e transições</p>
+                            <button onclick="openSimulatorsModal('fisica-moderna')" class="w-full bg-violet-600 text-white py-2 rounded-lg hover:bg-violet-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">☢️</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Radioatividade</h4>
+                            <p class="text-gray-600 text-sm mb-3">Decaimento e meia-vida</p>
+                            <button onclick="openSimulatorsModal('fisica-moderna')" class="w-full bg-rose-600 text-white py-2 rounded-lg hover:bg-rose-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-32 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
+                            <div class="text-4xl text-white">💫</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2">Efeito Fotoelétrico</h4>
+                            <p class="text-gray-600 text-sm mb-3">Quantização da energia luminosa</p>
+                            <button onclick="openSimulatorsModal('fisica-moderna')" class="w-full bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700 transition-colors text-sm">
+                                Ver Simuladores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-indigo-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Fique por Dentro das Novidades</h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+                Receba novos materiais, aulas e simuladores diretamente no seu email
+            </p>
+            <div class="max-w-md mx-auto flex gap-4">
+                <input type="email" placeholder="Seu melhor email" class="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                <button class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                    Inscrever
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="text-2xl font-bold mb-4">⚛️ Física com Prof. Everton</div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Democratizando o ensino de física através de materiais de qualidade, aulas interativas e simuladores práticos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Conteúdo</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Materiais Didáticos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Videoaulas</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Simuladores</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Exercícios</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Suporte</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contato</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Física com Prof. Everton. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para Simuladores -->
+    <div id="simulatorsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 id="simulatorModalTitle" class="text-2xl font-bold text-gray-900">Simuladores de Física</h2>
+                <button onclick="closeSimulatorsModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto max-h-[70vh]">
+                <!-- Botão para adicionar simulador -->
+                <div class="mb-6">
+                    <button onclick="showAddSimulatorForm()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        Adicionar Simulador
+                    </button>
+                </div>
+
+                <!-- Formulário para adicionar simulador -->
+                <div id="addSimulatorForm" class="hidden mb-6 p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4">Novo Simulador</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nome do Simulador</label>
+                            <input type="text" id="simulatorTitle" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ex: Lançamento de Projéteis">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Ícone</label>
+                            <select id="simulatorIcon" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="📐">📐 Geometria</option>
+                                <option value="⚖️">⚖️ Forças</option>
+                                <option value="🎯">🎯 Movimento</option>
+                                <option value="🔥">🔥 Calor</option>
+                                <option value="⚙️">⚙️ Máquinas</option>
+                                <option value="🧊">🧊 Estados</option>
+                                <option value="🔋">🔋 Elétrica</option>
+                                <option value="🧲">🧲 Magnético</option>
+                                <option value="⚡">⚡ Energia</option>
+                                <option value="🪞">🪞 Reflexão</option>
+                                <option value="🔬">🔬 Microscópio</option>
+                                <option value="🌈">🌈 Luz</option>
+                                <option value="〰️">〰️ Ondas</option>
+                                <option value="🔊">🔊 Som</option>
+                                <option value="🎵">🎵 Música</option>
+                                <option value="⚛️">⚛️ Átomo</option>
+                                <option value="☢️">☢️ Radioativo</option>
+                                <option value="💫">💫 Quantum</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Descrição</label>
+                        <textarea id="simulatorDescription" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Breve descrição do que o simulador faz"></textarea>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Link do Simulador</label>
+                        <input type="url" id="simulatorUrl" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://exemplo.com/simulador">
+                    </div>
+                    <div class="flex gap-3 mt-4">
+                        <button onclick="addSimulator()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                            Salvar Simulador
+                        </button>
+                        <button onclick="hideAddSimulatorForm()" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lista de simuladores -->
+                <div id="simulatorsList" class="space-y-4">
+                    <!-- Simuladores serão carregados aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Materiais -->
+    <div id="materialsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-900">Materiais de Física</h2>
+                <button onclick="closeMaterialsModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto max-h-[70vh]">
+                <!-- Botão para adicionar material -->
+                <div class="mb-6">
+                    <button onclick="showAddMaterialForm()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        Adicionar Material
+                    </button>
+                </div>
+
+                <!-- Formulário para adicionar material -->
+                <div id="addMaterialForm" class="hidden mb-6 p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4">Novo Material</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Título</label>
+                            <input type="text" id="materialTitle" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ex: Leis de Newton">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Tipo</label>
+                            <select id="materialType" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="pdf">PDF</option>
+                                <option value="video">Vídeo</option>
+                                <option value="exercicio">Exercício</option>
+                                <option value="simulacao">Simulação</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Descrição</label>
+                        <textarea id="materialDescription" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Breve descrição do material"></textarea>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Link/URL</label>
+                        <input type="url" id="materialUrl" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://exemplo.com/material.pdf">
+                    </div>
+                    <div class="flex gap-3 mt-4">
+                        <button onclick="addMaterial()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                            Salvar Material
+                        </button>
+                        <button onclick="hideAddMaterialForm()" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lista de materiais -->
+                <div id="materialsList" class="space-y-4">
+                    <!-- Materiais serão carregados aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dados dos materiais (simulando um banco de dados local)
+        let materialsData = {
+            mecanica: [
+                { id: 1, title: "Leis de Newton", type: "pdf", description: "Conceitos fundamentais das três leis de Newton", url: "https://exemplo.com/newton.pdf" },
+                { id: 2, title: "Cinemática Básica", type: "video", description: "Videoaula sobre movimento uniforme e uniformemente variado", url: "https://exemplo.com/cinematica.mp4" }
+            ],
+            termodinamica: [
+                { id: 3, title: "Primeira Lei da Termodinâmica", type: "pdf", description: "Conservação de energia em sistemas térmicos", url: "https://exemplo.com/primeira-lei.pdf" }
+            ],
+            eletromagnetismo: [
+                { id: 4, title: "Lei de Coulomb", type: "exercicio", description: "Exercícios sobre força elétrica", url: "https://exemplo.com/coulomb.pdf" }
+            ],
+            optica: [],
+            ondulatoria: [],
+            'fisica-moderna': []
+        };
+
+        // Dados dos simuladores (simulando um banco de dados local)
+        let simulatorsData = {
+            mecanica: [
+                { id: 1, title: "Lançamento de Projéteis", icon: "📐", description: "Simule diferentes ângulos e velocidades de lançamento", url: "https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_pt_BR.html" },
+                { id: 2, title: "Leis de Newton", icon: "⚖️", description: "Visualize forças e aceleração em tempo real", url: "https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_pt_BR.html" }
+            ],
+            termodinamica: [
+                { id: 3, title: "Estados da Matéria", icon: "🔥", description: "Explore sólidos, líquidos e gases", url: "https://phet.colorado.edu/sims/html/states-of-matter/latest/states-of-matter_pt_BR.html" }
+            ],
+            eletromagnetismo: [
+                { id: 4, title: "Lei de Coulomb", icon: "⚡", description: "Força entre cargas elétricas", url: "https://phet.colorado.edu/sims/html/coulombs-law/latest/coulombs-law_pt_BR.html" }
+            ],
+            optica: [],
+            ondulatoria: [],
+            'fisica-moderna': []
+        };
+
+        let currentCategory = '';
+        let currentSimulatorCategory = '';
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Newsletter subscription
+        document.querySelector('button[type="button"]').addEventListener('click', function() {
+            const email = this.previousElementSibling.value;
+            if (email) {
+                alert('Obrigado por se inscrever! Em breve você receberá nossas novidades.');
+                this.previousElementSibling.value = '';
+            } else {
+                alert('Por favor, insira um email válido.');
+            }
+        });
+
+        // Funções para o modal de materiais
+        function openMaterialsModal(category) {
+            currentCategory = category;
+            const modal = document.getElementById('materialsModal');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            const categoryNames = {
+                'mecanica': 'Mecânica',
+                'termodinamica': 'Termodinâmica',
+                'eletromagnetismo': 'Eletromagnetismo',
+                'optica': 'Óptica',
+                'ondulatoria': 'Ondulatória',
+                'fisica-moderna': 'Física Moderna'
+            };
+            
+            modalTitle.textContent = `Materiais de ${categoryNames[category]}`;
+            modal.classList.remove('hidden');
+            loadMaterials(category);
+        }
+
+        function closeMaterialsModal() {
+            document.getElementById('materialsModal').classList.add('hidden');
+            hideAddMaterialForm();
+        }
+
+        function showAddMaterialForm() {
+            document.getElementById('addMaterialForm').classList.remove('hidden');
+        }
+
+        function hideAddMaterialForm() {
+            document.getElementById('addMaterialForm').classList.add('hidden');
+            // Limpar formulário
+            document.getElementById('materialTitle').value = '';
+            document.getElementById('materialType').value = 'pdf';
+            document.getElementById('materialDescription').value = '';
+            document.getElementById('materialUrl').value = '';
+        }
+
+        function addMaterial() {
+            const title = document.getElementById('materialTitle').value;
+            const type = document.getElementById('materialType').value;
+            const description = document.getElementById('materialDescription').value;
+            const url = document.getElementById('materialUrl').value;
+
+            if (!title || !description || !url) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            const newMaterial = {
+                id: Date.now(),
+                title: title,
+                type: type,
+                description: description,
+                url: url
+            };
+
+            if (!materialsData[currentCategory]) {
+                materialsData[currentCategory] = [];
+            }
+
+            materialsData[currentCategory].push(newMaterial);
+            loadMaterials(currentCategory);
+            hideAddMaterialForm();
+            alert('Material adicionado com sucesso!');
+        }
+
+        function loadMaterials(category) {
+            const materialsList = document.getElementById('materialsList');
+            const materials = materialsData[category] || [];
+
+            if (materials.length === 0) {
+                materialsList.innerHTML = `
+                    <div class="text-center py-8 text-gray-500">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <p class="text-lg">Nenhum material encontrado</p>
+                        <p class="text-sm">Clique em "Adicionar Material" para começar</p>
+                    </div>
+                `;
+                return;
+            }
+
+            materialsList.innerHTML = materials.map(material => {
+                const typeIcons = {
+                    pdf: '📄',
+                    video: '🎥',
+                    exercicio: '📝',
+                    simulacao: '🔬'
+                };
+
+                const typeColors = {
+                    pdf: 'bg-red-100 text-red-800',
+                    video: 'bg-blue-100 text-blue-800',
+                    exercicio: 'bg-green-100 text-green-800',
+                    simulacao: 'bg-purple-100 text-purple-800'
+                };
+
+                return `
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-2xl">${typeIcons[material.type]}</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">${material.title}</h3>
+                                    <span class="px-2 py-1 text-xs font-medium rounded-full ${typeColors[material.type]}">
+                                        ${material.type.toUpperCase()}
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 mb-3">${material.description}</p>
+                                <div class="flex gap-2">
+                                    <a href="${material.url}" target="_blank" class="bg-indigo-600 text-white px-3 py-1 rounded text-sm hover:bg-indigo-700 transition-colors">
+                                        Acessar
+                                    </a>
+                                    <button onclick="deleteMaterial(${material.id})" class="bg-red-100 text-red-600 px-3 py-1 rounded text-sm hover:bg-red-200 transition-colors">
+                                        Excluir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function deleteMaterial(materialId) {
+            if (confirm('Tem certeza que deseja excluir este material?')) {
+                materialsData[currentCategory] = materialsData[currentCategory].filter(m => m.id !== materialId);
+                loadMaterials(currentCategory);
+                alert('Material excluído com sucesso!');
+            }
+        }
+
+        // Funções para o modal de simuladores
+        function openSimulatorsModal(category) {
+            currentSimulatorCategory = category;
+            const modal = document.getElementById('simulatorsModal');
+            const modalTitle = document.getElementById('simulatorModalTitle');
+            
+            const categoryNames = {
+                'mecanica': 'Mecânica',
+                'termodinamica': 'Termodinâmica',
+                'eletromagnetismo': 'Eletromagnetismo',
+                'optica': 'Óptica',
+                'ondulatoria': 'Ondulatória',
+                'fisica-moderna': 'Física Moderna'
+            };
+            
+            modalTitle.textContent = `Simuladores de ${categoryNames[category]}`;
+            modal.classList.remove('hidden');
+            loadSimulators(category);
+        }
+
+        function closeSimulatorsModal() {
+            document.getElementById('simulatorsModal').classList.add('hidden');
+            hideAddSimulatorForm();
+        }
+
+        function showAddSimulatorForm() {
+            document.getElementById('addSimulatorForm').classList.remove('hidden');
+        }
+
+        function hideAddSimulatorForm() {
+            document.getElementById('addSimulatorForm').classList.add('hidden');
+            // Limpar formulário
+            document.getElementById('simulatorTitle').value = '';
+            document.getElementById('simulatorIcon').value = '📐';
+            document.getElementById('simulatorDescription').value = '';
+            document.getElementById('simulatorUrl').value = '';
+        }
+
+        function addSimulator() {
+            const title = document.getElementById('simulatorTitle').value;
+            const icon = document.getElementById('simulatorIcon').value;
+            const description = document.getElementById('simulatorDescription').value;
+            const url = document.getElementById('simulatorUrl').value;
+
+            if (!title || !description || !url) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            const newSimulator = {
+                id: Date.now(),
+                title: title,
+                icon: icon,
+                description: description,
+                url: url
+            };
+
+            if (!simulatorsData[currentSimulatorCategory]) {
+                simulatorsData[currentSimulatorCategory] = [];
+            }
+
+            simulatorsData[currentSimulatorCategory].push(newSimulator);
+            loadSimulators(currentSimulatorCategory);
+            hideAddSimulatorForm();
+            alert('Simulador adicionado com sucesso!');
+        }
+
+        function loadSimulators(category) {
+            const simulatorsList = document.getElementById('simulatorsList');
+            const simulators = simulatorsData[category] || [];
+
+            if (simulators.length === 0) {
+                simulatorsList.innerHTML = `
+                    <div class="text-center py-8 text-gray-500">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-lg">Nenhum simulador encontrado</p>
+                        <p class="text-sm">Clique em "Adicionar Simulador" para começar</p>
+                    </div>
+                `;
+                return;
+            }
+
+            simulatorsList.innerHTML = simulators.map(simulator => {
+                return `
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-2xl">${simulator.icon}</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">${simulator.title}</h3>
+                                </div>
+                                <p class="text-gray-600 mb-3">${simulator.description}</p>
+                                <div class="flex gap-2">
+                                    <a href="${simulator.url}" target="_blank" class="bg-indigo-600 text-white px-3 py-1 rounded text-sm hover:bg-indigo-700 transition-colors">
+                                        Abrir Simulador
+                                    </a>
+                                    <button onclick="deleteSimulator(${simulator.id})" class="bg-red-100 text-red-600 px-3 py-1 rounded text-sm hover:bg-red-200 transition-colors">
+                                        Excluir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function deleteSimulator(simulatorId) {
+            if (confirm('Tem certeza que deseja excluir este simulador?')) {
+                simulatorsData[currentSimulatorCategory] = simulatorsData[currentSimulatorCategory].filter(s => s.id !== simulatorId);
+                loadSimulators(currentSimulatorCategory);
+                alert('Simulador excluído com sucesso!');
+            }
+        }
+
+        // Add click handlers for all buttons
+        document.querySelectorAll('button').forEach(button => {
+            if (!button.id && !button.onclick && !button.getAttribute('onclick')) {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    if (buttonText.includes('Explorar') || buttonText.includes('Assistir')) {
+                        document.querySelector('#materiais, #aulas').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+
+        // Fechar modais ao clicar fora deles
+        document.getElementById('materialsModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMaterialsModal();
+            }
+        });
+
+        document.getElementById('simulatorsModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSimulatorsModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97b01460856d1b11',t:'MTc1NzE4Mzg2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
